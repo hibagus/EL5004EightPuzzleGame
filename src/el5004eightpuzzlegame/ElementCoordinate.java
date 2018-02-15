@@ -49,4 +49,77 @@ public class ElementCoordinate
     {
         this.VerticalCoordinate = newVerticalValue;
     }
+    
+    public void moveOneStepNorth()
+    {
+        /*
+        * This Method will move the coordinate one to the north.
+        * Please verify if moving to the north is a legal move first otherwise
+        * the resulting coordinate will out of the boundaries.
+        */
+        setVerticalCoordinate(getVerticalCoordinate() + 1);
+    }
+    
+    public void moveOneStepSouth()
+    {
+        /*
+        * This Method will move the coordinate one to the south.
+        * Please verify if moving to the south is a legal move first otherwise
+        * the resulting coordinate will out of the boundaries.
+        */
+        setVerticalCoordinate(getVerticalCoordinate() - 1);
+    }
+    
+    public void moveOneStepEast()
+    {
+        /*
+        * This Method will move the coordinate one to the east.
+        * Please verify if moving to the east is a legal move first otherwise
+        * the resulting coordinate will out of the boundaries.
+        */
+        setHorizontalCoordinate(getHorizontalCoordinate() + 1);
+    }
+    
+    public void moveOneStepWest()
+    {
+        /*
+        * This Method will move the coordinate one to the west.
+        * Please verify if moving to the west is a legal move first otherwise
+        * the resulting coordinate will out of the boundaries.
+        */
+        setHorizontalCoordinate(getHorizontalCoordinate() - 1);
+    }
+    
+    public boolean isMoveOneStepNorthValid()
+    {
+        /*
+        * Validate whether moving one step to the north is a legal move or not.
+        */
+        return getVerticalCoordinate() < GameParameter.MaximumVerticalCoordinate;
+    }
+    
+    public boolean isMoveOneStepSouthValid()
+    {
+        /*
+        * Validate whether moving one step to the south is a legal move or not.
+        */
+        return getVerticalCoordinate() > GameParameter.MinimumVerticalCoordinate;
+    }
+    
+    public boolean isMoveOneStepEastValid()
+    {
+        /*
+        * Validate whether moving one step to the east is a legal move or not.
+        */
+        return getHorizontalCoordinate() < GameParameter.MaximumHorizontalCoordinate;
+    }
+    
+    public boolean isMoveOneStepWestValid()
+    {
+        /*
+        * Validate whether moving one step to the west is a legal move or not.
+        */
+        return getHorizontalCoordinate() > GameParameter.MinimumHorizontalCoordinate;
+    }
+    
 }
