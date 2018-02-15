@@ -15,5 +15,38 @@ package el5004eightpuzzlegame;
  */
 public class ElementCoordinate
 {
+    private int HorizontalCoordinate;
+    private int VerticalCoordinate;
     
+    public ElementCoordinate()
+    {
+        this.HorizontalCoordinate = 0;
+        this.VerticalCoordinate = 0;
+    }
+    
+    public ElementCoordinate(int InitHorizontalValue, int InitVerticalValue)
+    {
+        this.HorizontalCoordinate = InitHorizontalValue;
+        this.VerticalCoordinate = InitVerticalValue;
+    }
+    
+    public int getHorizontalCoordinate()
+    {
+        return this.HorizontalCoordinate;
+    }
+    
+    public int getVerticalCoordinate()
+    {
+        return this.VerticalCoordinate;
+    }
+    
+    public void setHorizontalCoordinate(int newHorizontalValue)
+    {
+        this.HorizontalCoordinate = newHorizontalValue;
+    }
+    
+    public void setVerticalCoordinate(int newVerticalValue)
+    {
+        this.VerticalCoordinate = newVerticalValue;
+    }
 }
